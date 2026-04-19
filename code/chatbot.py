@@ -4,14 +4,14 @@ import os
 story_path = "outputs/story.txt"
 
 if not os.path.exists(story_path):
-    print("❌ Story not found. Run visual_story.py first.")
+    print(" Story not found. Run visual_story.py first.")
     exit()
 
 with open(story_path, "r") as f:
     story = f.read()
 
 def chatbot():
-    print("🤖 AI Tutor Ready! Ask about Virtualization (type 'exit' to stop)\n")
+    print(" AI Tutor Ready! Ask about Virtualization (type 'exit' to stop)\n")
 
     while True:
         q = input("You: ").lower()
@@ -42,6 +42,6 @@ def chatbot():
                 print(story[:250], "...")
 
         else:
-            print("Bot: ❌ This question is outside the lecture topic. Please ask about virtualization or cloud computing.")
+            print("Bot:  This question is outside the lecture topic. Please ask about virtualization or cloud computing.")
 
 chatbot()
